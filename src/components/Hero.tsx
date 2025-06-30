@@ -70,7 +70,7 @@ export default function Hero() {
           animate="visible"
         >
           <Image
-            src="/Hero-image.png"
+            src="/Hero-Image.png"
             alt="Hero Illustration"
             width={699}
             height={831}
