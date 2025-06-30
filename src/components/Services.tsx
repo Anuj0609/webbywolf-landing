@@ -1,6 +1,7 @@
 import React from "react";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { motion, easeOut } from "framer-motion";
+import Image from "next/image";
 
 function Services() {
   const fadeLeft = {
@@ -76,10 +77,14 @@ function Services() {
           viewport={{ once: true, amount: 0.2 }}
           variants={fadeRight}
         >
-          <img
-            src="./Service1.png"
+          <Image
+            src="/Service1.png"
             alt="Service"
+            width={600}
+            height={400}
             className="w-[400px] lg:w-[600px]"
+            style={{ height: "auto" }}
+            sizes="(max-width: 1024px) 400px, 600px"
           />
         </motion.div>
 
@@ -121,10 +126,14 @@ function Services() {
             viewport={{ once: true, amount: 0.2 }}
             variants={fadeRight}
           >
-            <img
-              src="./Service1.png"
+            <Image
+              src="/Service1.png"
               alt="Service"
+              width={400}
+              height={300}
               className="w-full max-w-xs sm:max-w-md"
+              style={{ height: "auto" }}
+              sizes="(max-width: 640px) 20rem, (max-width: 768px) 28rem, 100vw"
             />
           </motion.div>
           <motion.div

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import Image from "next/image";
 
 export default function Story() {
   const cardsData = [
@@ -75,10 +76,13 @@ export default function Story() {
 
       <div className="relative w-full md:w-1/2 mx-auto transition-all duration-700 ease-in-out">
         <div className="hidden md:block relative">
-          <img
+          <Image
             src={currentCard.image}
             alt={currentCard.card.title}
+            width={800}
+            height={500}
             className="w-full object-cover rounded-lg transition-all duration-700 ease-in-out"
+            style={{ height: "auto" }}
           />
 
           <div className="absolute top-[20%] right-[10%] translate-x-full w-[90%] bg-white shadow-lg p-8 rounded-lg transition-all duration-700 ease-in-out">
@@ -95,10 +99,13 @@ export default function Story() {
           </div>
         </div>
         <div className="block md:hidden">
-          <img
+          <Image
             src={currentCard.image}
             alt={currentCard.card.title}
+            width={800}
+            height={500}
             className="w-full object-cover rounded-lg transition-all duration-700 ease-in-out"
+            style={{ height: "auto" }}
           />
           <div className="w-full bg-white shadow-lg p-4 rounded-lg mt-4">
             <div className="font-semibold text-lg leading-[100%] tracking-[0.06em] font-inter mb-1 text-slate-600">

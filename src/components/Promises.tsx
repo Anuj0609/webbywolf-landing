@@ -1,6 +1,7 @@
 import React from "react";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { motion, easeOut } from "framer-motion";
+import Image from "next/image";
 
 export default function Promises() {
   const steps = ["Research", "Plan", "Design"];
@@ -75,10 +76,13 @@ export default function Promises() {
           viewport={{ once: true, amount: 0.2 }}
           variants={fadeRight}
         >
-          <img
-            src="./Promise1.png"
+          <Image
+            src="/Promise1.png" 
             alt=""
+            width={600} 
+            height={400} 
             className="w-full max-w-xs sm:max-w-md md:w-[600px]"
+            style={{ height: "auto" }} 
           />
         </motion.div>
       </div>

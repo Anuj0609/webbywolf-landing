@@ -2,39 +2,40 @@ import React, { useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { FaLongArrowAltLeft } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 export default function Join() {
   const people = [
     {
-      icon: "./Icon1.png",
+      icon: "/Icon1.png",
       description:
         "Purus maecenas quis elit eu, aliquet. Tellus porttitor ut sollicitudin sit non fringilla. Quam nunc volutpat senectus neque eget amet pharetra, euismod. Tempus, nunc, molestie imperdiet curabitur commodo euismod.",
       profile: "/User1.png",
       name: "Jane Cooper",
     },
     {
-      icon: "./Icon2.png",
+      icon: "/Icon2.png",
       description:
         "Vehicula sit sit pharetra bibendum ut risus accumsan. Purus, in metus, enim, ipsum morbi euismod pellentesque. Mattis pharetra accumsan eget est mi enim, id. Sit quam tortor eu tellus non, in euismod integer.",
       profile: "/User2.png",
       name: "Ralph Edwards",
     },
     {
-      icon: "./Icon3.png",
+      icon: "/Icon3.png",
       description:
         "Viverra lacus suspendisse elit, adipiscing orci, non turpis etiam sapien. Viverra blandit sem neque pretium. Duis enim semper fermentum consequat aenean libero. Blandit porta leo condimentum dolor, nisi, aliquet ante laoreet.",
       profile: "/User3.png",
       name: "Courtney Henry",
     },
     {
-      icon: "./Icon4.png",
+      icon: "/Icon4.png",
       description:
         "Hendrerit augue ut nec,  quis integer netus. Sagittis fusce rhoncus magnis habitant amet amet. Egestas amet habitasse amet risus tellus ornare. Hendrerit augue ut nec, senectus. Mauris egestas feugiat leo vitae praesent neque, et.",
       profile: "/User4.png",
       name: "Cameron Williamson",
     },
     {
-      icon: "./Icon1.png",
+      icon: "/Icon1.png",
       description:
         "Purus maecenas quis elit eu, aliquet. Tellus porttitor ut sollicitudin sit non fringilla. Quam nunc volutpat senectus neque eget amet pharetra, euismod. Tempus, nunc, molestie imperdiet curabitur commodo euismod.",
       profile: "/User1.png",
@@ -43,12 +44,13 @@ export default function Join() {
   ];
 
   const isMd = typeof window !== "undefined" && window.innerWidth >= 768;
-  const [cardsPerView, setCardsPerView] = useState(isMd ? 3 : 1);
+  const [cardsPerView, setCardsPerView] = useState(1);
 
   React.useEffect(() => {
     const handleResize = () => {
       setCardsPerView(window.innerWidth >= 768 ? 3 : 1);
     };
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -82,7 +84,7 @@ export default function Join() {
       x: 0,
       opacity: 1,
       scale: 1,
-      transition: { duration: 0.5, stiffness: 60 }, // removed `type`
+      transition: { duration: 0.5, stiffness: 60 },
     }),
     exit: (direction: number) => ({
       x: direction > 0 ? -100 : 100,
@@ -118,7 +120,7 @@ export default function Join() {
             <AnimatePresence initial={false} custom={direction}>
               {visiblePeople.map((person, index) => (
                 <motion.div
-                  key={person.name + currentIndex} 
+                  key={person.name + currentIndex}
                   className="bg-white text-[#0F172A] p-6 rounded-xl shadow-md flex flex-col gap-4 
                          transition-transform duration-300 ease-in-out hover:scale-105"
                   custom={direction}
@@ -128,14 +130,22 @@ export default function Join() {
                   exit="exit"
                   layout
                 >
-                  <img src={person.icon} alt="icon" className="w-10 h-10" />
+                  <Image
+                    src={person.icon}
+                    alt="icon"
+                    width={40}
+                    height={40}
+                    className="w-10 h-10"
+                  />
                   <p className="text-[#475569] text-[15px] md:text-[18px] leading-[22px] md:leading-[25px] font-normal font-['Inter']">
                     {person.description}
                   </p>
                   <div className="flex items-center gap-4 mt-auto">
-                    <img
+                    <Image
                       src={person.profile}
                       alt={person.name}
+                      width={40}
+                      height={40}
                       className="w-10 h-10 rounded-full"
                     />
                     <p className="text-[14px] md:text-[16px] font-medium font-['Roboto'] tracking-[0.5px]">

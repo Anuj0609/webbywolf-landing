@@ -1,6 +1,7 @@
 import React from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { motion, easeOut } from "framer-motion";
+import Image from "next/image";
 
 export default function Feature() {
   const fadeUp = {
@@ -83,7 +84,12 @@ export default function Feature() {
         viewport={{ once: true, amount: 0.2 }}
         variants={fadeIn}
       >
-        <img src="./Feature1.png" alt="" />
+        <Image
+          src="/Feature1.png"
+          alt=""
+          width={550}
+          height={550}
+        />{" "}
       </motion.div>
     </div>
   );

@@ -1,5 +1,6 @@
 import React from "react";
 import { motion, easeOut } from "framer-motion";
+import Image from "next/image";
 
 function Download() {
   const containerVariants = {
@@ -66,14 +67,14 @@ function Download() {
           whileTap={{ scale: 0.96 }}
           style={{ borderRadius: 8 }}
         >
-          <img src="./Download1.png" alt="" />
+          <Image src="/Download1.png" alt="" width={140} height={42} />
         </motion.button>
         <motion.button
           whileHover={{ scale: 1.07, boxShadow: "0 8px 32px rgba(0,0,0,0.10)" }}
           whileTap={{ scale: 0.96 }}
           style={{ borderRadius: 8 }}
         >
-          <img src="./Download2.png" alt="" />
+          <Image src="/Download2.png" alt="" width={140} height={42} />
         </motion.button>
       </motion.div>
       <motion.img

@@ -1,5 +1,6 @@
 import React from "react";
 import { motion, easeOut } from "framer-motion";
+import Image from "next/image";
 
 function Details() {
   const cards = [
@@ -102,10 +103,13 @@ function Details() {
             whileTap={{ scale: 0.98 }}
             style={{ transition: "box-shadow 0.3s" }}
           >
-            <img
+            <Image
               src={card.image}
               alt={card.title}
+              width={800}
+              height={256}
               className="w-full h-48 md:h-64 object-cover rounded-t-lg mb-4"
+              style={{ width: "100%", height: "auto" }} 
             />
             <div className="flex flex-col gap-4 pb-8 md:pb-20 pl-2">
               <h3 className="text-[17px] md:text-[20px] font-semibold leading-[100%] tracking-[-0.02em] text-[#222222] font-['Inter'] mb-2">

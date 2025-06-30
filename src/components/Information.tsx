@@ -3,7 +3,6 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { motion, easeOut } from "framer-motion";
 
 function Information() {
-  // Animation variants
   const headingVariants = {
     hidden: { opacity: 0, y: 40 },
     visible: {
