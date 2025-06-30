@@ -1,6 +1,6 @@
 import React from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
-import { motion } from "framer-motion";
+import { motion, easeOut } from "framer-motion";
 
 function Information() {
   // Animation variants
@@ -9,7 +9,7 @@ function Information() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.7, ease: "easeOut" },
+      transition: { duration: 0.7, ease: easeOut },
     },
   };
 
@@ -25,7 +25,7 @@ function Information() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
+      transition: { duration: 0.6, ease: easeOut },
     },
   };
 
@@ -34,7 +34,7 @@ function Information() {
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 0.5, ease: "easeOut", delay: 0.3 },
+      transition: { duration: 0.5, ease: easeOut, delay: 0.3 },
     },
     tap: { scale: 0.92 },
   };
@@ -44,7 +44,7 @@ function Information() {
     visible: {
       opacity: 1,
       x: 0,
-      transition: { duration: 0.5, ease: "easeOut", delay: 0.4 },
+      transition: { duration: 0.5, ease: easeOut, delay: 0.4 },
     },
   };
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, easeOut } from "framer-motion";
 
 function Details() {
   const cards = [
@@ -45,7 +45,7 @@ function Details() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.7, ease: "easeOut" },
+      transition: { duration: 0.7, ease: easeOut },
     },
   };
 

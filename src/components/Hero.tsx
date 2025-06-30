@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, easeOut } from "framer-motion";
 import Navbar from "./Navbar";
 import Subhero from "./Subhero";
 import Image from "next/image";
@@ -29,7 +29,7 @@ export default function Hero() {
     visible: {
       opacity: 1,
       x: 0,
-      transition: { duration: 0.8, ease: "easeOut" },
+      transition: { duration: 0.8, ease: easeOut },
     },
   };
 
@@ -38,7 +38,7 @@ export default function Hero() {
     visible: {
       opacity: 1,
       x: 0,
-      transition: { duration: 0.8, ease: "easeOut", delay: 0.3 },
+      transition: { duration: 0.8, ease: easeOut, delay: 0.3 },
     },
   };
 

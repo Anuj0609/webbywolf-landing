@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Faq() {
-  const [activeIndex, setActiveIndex] = useState(null);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const faqData = [
     {
@@ -31,9 +31,10 @@ export default function Faq() {
     },
   ];
 
-  const toggleAccordion = (index) => {
+  const toggleAccordion = (index: number) => {
     setActiveIndex(index === activeIndex ? null : index);
   };
+  
 
   return (
     <div className="px-4 sm:px-8 md:px-25 py-6 sm:py-10 flex flex-col items-start bg-white w-full">

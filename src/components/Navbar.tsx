@@ -4,7 +4,7 @@ import { HiMenu } from "react-icons/hi";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState(null);
+  const [openDropdown, setOpenDropdown] = useState<number | null>(null);
 
   const items = [
     {
@@ -24,9 +24,10 @@ function Navbar() {
     },
   ];
 
-  const handleDropdown = (id) => {
+  const handleDropdown = (id: number) => {
     setOpenDropdown(openDropdown === id ? null : id);
   };
+  
 
   return (
     <div className="w-full px-6 sm:px-[80px] py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between">

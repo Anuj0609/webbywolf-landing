@@ -73,18 +73,18 @@ export default function Join() {
   const visiblePeople = people.slice(currentIndex, currentIndex + cardsPerView);
 
   const cardVariants = {
-    enter: (direction) => ({
+    enter: (direction: number) => ({
       x: direction > 0 ? 100 : -100,
       opacity: 0,
       scale: 0.95,
     }),
-    center: {
+    center: (direction: number) => ({
       x: 0,
       opacity: 1,
       scale: 1,
-      transition: { duration: 0.5, type: "spring", stiffness: 60 },
-    },
-    exit: (direction) => ({
+      transition: { duration: 0.5, stiffness: 60 }, // removed `type`
+    }),
+    exit: (direction: number) => ({
       x: direction > 0 ? -100 : 100,
       opacity: 0,
       scale: 0.95,

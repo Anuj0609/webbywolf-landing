@@ -1,5 +1,6 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, easeOut } from "framer-motion";
+
 
 function Brand() {
   const rowVariants = {
@@ -7,7 +8,7 @@ function Brand() {
     visible: (i = 0) => ({
       opacity: 1,
       y: 0,
-      transition: { duration: 0.7, ease: "easeOut", delay: i * 0.18 },
+      transition: { duration: 0.7, ease: easeOut, delay: i * 0.18 },
     }),
   };
 
@@ -16,7 +17,7 @@ function Brand() {
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 0.5, ease: "easeOut" },
+      transition: { duration: 0.5, ease: easeOut },
     },
   };
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
-import { motion } from "framer-motion";
+import { motion, easeOut } from "framer-motion";
 
 function Quotation() {
   const headingVariants = {
@@ -8,7 +8,7 @@ function Quotation() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.7, ease: "easeOut" },
+      transition: { duration: 0.7, ease: easeOut },
     },
   };
   const formVariants = {
@@ -16,7 +16,7 @@ function Quotation() {
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 0.7, ease: "easeOut", delay: 0.2 },
+      transition: { duration: 0.7, ease: easeOut, delay: 0.2 },
     },
   };
   const buttonVariants = {
@@ -132,7 +132,7 @@ function Quotation() {
             Description
           </label>
           <textarea
-            rows="4"
+            rows={4}
             className="w-full border border-gray-300 px-4 py-2 rounded bg-[#F4F4F4]"
             placeholder="Choose a project type"
           ></textarea>
