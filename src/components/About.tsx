@@ -23,7 +23,6 @@ function About() {
     },
   ];
 
-  // Animation variants
   const containerVariants = {
     hidden: {},
     visible: {
@@ -62,7 +61,6 @@ function About() {
 
   return (
     <div className="relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[8px] after:bg-[linear-gradient(90deg,_#043898_0%,_#079902_45.96%,_#170041_91.18%)] after:z-10">
-      {/* Main Content */}
       <div
         className="
           flex flex-col xl:flex-row gap-8 xl:gap-[30px]
@@ -72,7 +70,6 @@ function About() {
           relative z-10 bg-white
         "
       >
-        {/* Left Section */}
         <motion.div
           className="
             flex flex-col flex-1
@@ -106,7 +103,6 @@ function About() {
             at purus lectus.
           </motion.div>
 
-          {/* About Cards */}
           <motion.div
             className="flex flex-col gap-6 md:gap-10"
             variants={containerVariants}
@@ -151,7 +147,6 @@ function About() {
           </motion.div>
         </motion.div>
 
-        {/* Right Section with Animated Image */}
         <motion.div
           className="
             flex-shrink-0

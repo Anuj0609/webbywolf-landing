@@ -3,7 +3,6 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { motion, easeOut } from "framer-motion";
 
 function Gallery() {
-  // Animation variants
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: easeOut } },
@@ -16,7 +15,6 @@ function Gallery() {
     }),
   };
 
-  // Array of images and positions for mapping
   const galleryImages = [
     { src: "./Gallery1.png", className: "absolute top-[109px] left-[735px]" },
     { src: "./Gallery2.png", className: "absolute top-20 left-[900px]" },
@@ -28,7 +26,6 @@ function Gallery() {
     { src: "/Gallery8.png", className: "absolute bottom-0 left-[900px]" },
   ];
 
-  // Responsive fallback images (no absolute positioning)
   const galleryImagesMobile = [
     "./Gallery1.png",
     "./Gallery2.png",
@@ -71,7 +68,6 @@ function Gallery() {
         </motion.button>
       </motion.div>
 
-      {/* Desktop: Absolute positioned gallery images */}
       <div className="hidden md:block w-full h-full absolute top-0 left-0 pointer-events-none">
         {galleryImages.map((img, i) => (
           <motion.img
@@ -91,7 +87,6 @@ function Gallery() {
         ))}
       </div>
 
-      {/* Mobile: Responsive grid gallery */}
       <div className="block md:hidden px-4 pt-4 pb-8">
         <div className="grid grid-cols-2 gap-3">
           {galleryImagesMobile.map((src, i) => (

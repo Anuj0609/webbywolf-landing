@@ -51,7 +51,6 @@ function Information() {
   return (
     <div className="bg-[url('/Information1.png')] bg-cover bg-center w-full h-auto relative">
       <div className="flex flex-col items-center justify-center text-center h-full py-10 sm:py-14 md:py-[50px] gap-6">
-        {/* Heading */}
         <motion.div
           className="
             font-['Roboto_Condensed'] font-bold
@@ -68,7 +67,6 @@ function Information() {
           aliquam viverra mi.
         </motion.div>
 
-        {/* Paragraphs */}
         <motion.div
           className="flex flex-col gap-4 px-4 sm:px-8 md:px-[80px] xl:px-[354px]"
           variants={paraContainerVariants}
@@ -98,7 +96,6 @@ function Information() {
           </motion.span>
         </motion.div>
 
-        {/* CTA Button */}
         <motion.div
           className="flex justify-center"
           variants={buttonVariants}
@@ -117,7 +114,6 @@ function Information() {
         </motion.div>
       </div>
 
-      {/* Logo Button: hidden on screens smaller than md */}
       <motion.button
         className="
           hidden md:block

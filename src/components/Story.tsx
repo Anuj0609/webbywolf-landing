@@ -51,13 +51,11 @@ export default function Story() {
     setCurrent((prev) => (prev - 1 + cardsData.length) % cardsData.length);
   };
 
-  // ✅ Auto Slide Effect
   useEffect(() => {
     const interval = setInterval(() => {
       handleNext();
-    }, 4000); // auto-slide every 4 seconds
+    }, 4000);
     return () => clearInterval(interval);
-    // eslint-disable-next-line
   }, [current]);
 
   const currentCard = cardsData[current];
@@ -75,9 +73,7 @@ export default function Story() {
         </p>
       </div>
 
-      {/* Image & Card with animation */}
       <div className="relative w-full md:w-1/2 mx-auto transition-all duration-700 ease-in-out">
-        {/* Desktop: overlay card */}
         <div className="hidden md:block relative">
           <img
             src={currentCard.image}
@@ -98,7 +94,6 @@ export default function Story() {
             </button>
           </div>
         </div>
-        {/* Mobile: card below image */}
         <div className="block md:hidden">
           <img
             src={currentCard.image}
@@ -120,7 +115,6 @@ export default function Story() {
         </div>
       </div>
 
-      {/* Controls */}
       <div className="flex justify-center gap-6 mt-8 md:mt-10">
         <button
           onClick={handlePrev}
@@ -138,7 +132,6 @@ export default function Story() {
         </button>
       </div>
 
-      {/* Dots */}
       <div className="flex justify-center mt-4 space-x-2">
         {cardsData.map((_, i) => (
           <div

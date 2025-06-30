@@ -27,7 +27,6 @@ function Contact() {
     },
   ];
 
-  // Animation variants
   const containerVariants = {
     hidden: {},
     visible: {
@@ -121,7 +120,6 @@ function Contact() {
         ))}
       </motion.div>
 
-      {/* Desktop: absolutely positioned image */}
       <motion.div
         className="
           hidden md:block
@@ -146,7 +144,6 @@ function Contact() {
         />
       </motion.div>
 
-      {/* Mobile: image below content */}
       <motion.div
         className="
           block md:hidden mt-6 mx-auto w-full max-w-xs sm:max-w-sm

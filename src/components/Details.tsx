@@ -33,7 +33,6 @@ function Details() {
     },
   ];
 
-  // Animation variants
   const containerVariants = {
     hidden: {},
     visible: {
@@ -52,7 +51,6 @@ function Details() {
 
   return (
     <div className="px-4 sm:px-8 md:px-20 py-6 md:py-10 mb-10 md:mb-40">
-      {/* Heading block: hidden on screens smaller than md */}
       <div className="hidden md:block pl-5 pr-[521px]">
         <div className="text-[24px] font-semibold leading-[100%] tracking-[-0.04em] text-[#0546D2] font-['Inter'] mb-2">
           Lorem ipsum dolor sit amet
@@ -70,7 +68,6 @@ function Details() {
         </div>
       </div>
 
-      {/* Mobile heading block */}
       <div className="block md:hidden mb-6">
         <div className="text-[18px] font-semibold leading-[100%] tracking-[-0.04em] text-[#0546D2] font-['Inter'] mb-1">
           Lorem ipsum dolor sit amet
@@ -86,7 +83,6 @@ function Details() {
         </div>
       </div>
 
-      {/* Mapped Card Grid with Animation */}
       <motion.div
         className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-15 px-0 md:px-[150px]"
         variants={containerVariants}

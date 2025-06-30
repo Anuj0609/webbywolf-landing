@@ -5,7 +5,6 @@ import { motion, easeOut } from "framer-motion";
 export default function Promises() {
   const steps = ["Research", "Plan", "Design"];
 
-  // Animation variants
   const fadeLeft = {
     hidden: { opacity: 0, x: -60 },
     visible: { opacity: 1, x: 0, transition: { duration: 0.7, ease: easeOut } },

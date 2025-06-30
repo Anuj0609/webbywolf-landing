@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 
 function Download() {
-  // Animation variants
   const containerVariants = {
     hidden: {},
     visible: {
@@ -77,7 +76,6 @@ function Download() {
           <img src="./Download2.png" alt="" />
         </motion.button>
       </motion.div>
-      {/* Absolute image: hidden on screens smaller than md */}
       <motion.img
         src="./Download3.png"
         alt=""

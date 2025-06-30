@@ -3,7 +3,6 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 import { motion, easeOut } from "framer-motion";
 
 function Services() {
-  // Animation variants
   const fadeLeft = {
     hidden: { opacity: 0, x: -60 },
     visible: { opacity: 1, x: 0, transition: { duration: 0.7, ease: easeOut } },
@@ -37,7 +36,6 @@ function Services() {
           width: "100%",
         }}
       >
-        {/* Section Content */}
         <motion.div
           className="px-4 sm:px-8 md:px-[80px] pt-8 sm:pt-12 md:pt-16 pb-8 md:pb-[400px]"
           initial="hidden"
@@ -71,7 +69,6 @@ function Services() {
           </div>
         </motion.div>
 
-        {/* Desktop: Absolute right image and bottom card */}
         <motion.div
           className="hidden md:block absolute right-0 top-[-10%]"
           initial="hidden"
@@ -116,7 +113,6 @@ function Services() {
           </div>
         </motion.div>
 
-        {/* Mobile: Stack image and card below text */}
         <div className="md:hidden flex flex-col gap-6 px-4 pb-8">
           <motion.div
             className="flex justify-center"

@@ -3,7 +3,6 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { motion } from "framer-motion";
 
 function Quotation() {
-  // Animation variants
   const headingVariants = {
     hidden: { opacity: 0, y: 40 },
     visible: {
@@ -42,7 +41,6 @@ function Quotation() {
         viewport={{ once: true, amount: 0.3 }}
         variants={formVariants}
       >
-        {/* First Row */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -66,7 +64,6 @@ function Quotation() {
           </div>
         </div>
 
-        {/* Second Row */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -95,7 +92,6 @@ function Quotation() {
           </div>
         </div>
 
-        {/* Third Row */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -131,7 +127,6 @@ function Quotation() {
           </div>
         </div>
 
-        {/* Description */}
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">
             Description
@@ -149,7 +144,6 @@ function Quotation() {
           <span className="underline cursor-pointer">Privacy Policy</span>.
         </div>
 
-        {/* Submit Button */}
         <div className="flex justify-center">
           <motion.button
             type="submit"

@@ -16,7 +16,6 @@ export default function Hero() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Animation variants for navbar background
   const navbarVariants = {
     initial: { backgroundColor: "rgba(255, 255, 255, 0)" },
     scrolled: {
@@ -25,7 +24,6 @@ export default function Hero() {
     },
   };
 
-  // Animation variants for Subhero and image
   const contentVariants = {
     hidden: { opacity: 0, x: -50 },
     visible: {
@@ -46,7 +44,6 @@ export default function Hero() {
 
   return (
     <div className="w-full relative mb-10 md:mb-[82px] min-h-[300px] md:min-h-[831px]">
-      {/* Animated Navbar with background toggle */}
       <motion.div
         className="fixed top-0 left-0 w-full z-50 transition-all duration-300"
         variants={navbarVariants}
@@ -56,7 +53,6 @@ export default function Hero() {
         <Navbar />
       </motion.div>
 
-      {/* Content below navbar with fade/slide animations */}
       <div className="pt-16 md:pt-[100px] flex items-center justify-between relative">
         <motion.div
           className="relative z-20 w-full md:w-auto"
@@ -67,7 +63,6 @@ export default function Hero() {
           <Subhero />
         </motion.div>
 
-        {/* Image - Hidden on screens smaller than md */}
         <motion.div
           className="hidden md:block absolute top-0 right-0 z-10"
           variants={imageVariants}

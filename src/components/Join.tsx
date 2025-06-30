@@ -42,7 +42,6 @@ export default function Join() {
     },
   ];
 
-  // Responsive: show 3 cards on md+, 1 card on mobile
   const isMd = typeof window !== "undefined" && window.innerWidth >= 768;
   const [cardsPerView, setCardsPerView] = useState(isMd ? 3 : 1);
 
@@ -55,7 +54,7 @@ export default function Join() {
   }, []);
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [direction, setDirection] = useState(0); // -1 for left, 1 for right
+  const [direction, setDirection] = useState(0);
 
   const handleNext = () => {
     if (currentIndex + cardsPerView < people.length) {
@@ -73,7 +72,6 @@ export default function Join() {
 
   const visiblePeople = people.slice(currentIndex, currentIndex + cardsPerView);
 
-  // Animation variants for the cards
   const cardVariants = {
     enter: (direction) => ({
       x: direction > 0 ? 100 : -100,
@@ -120,7 +118,7 @@ export default function Join() {
             <AnimatePresence initial={false} custom={direction}>
               {visiblePeople.map((person, index) => (
                 <motion.div
-                  key={person.name + currentIndex} // unique key for animation
+                  key={person.name + currentIndex} 
                   className="bg-white text-[#0F172A] p-6 rounded-xl shadow-md flex flex-col gap-4 
                          transition-transform duration-300 ease-in-out hover:scale-105"
                   custom={direction}

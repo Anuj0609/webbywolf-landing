@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 
 function Brand() {
-  // Animation variants
   const rowVariants = {
     hidden: { opacity: 0, y: 40 },
     visible: (i = 0) => ({
@@ -21,7 +20,6 @@ function Brand() {
     },
   };
 
-  // Brand image rows
   const brandRows = [
     ["./Brand1.png", "./Brand2.png", "./Brand3.png", "./Brand4.png"],
     ["./Brand5.png", "./Brand6.png", "./Brand7.png", "./Brand8.png"],
@@ -30,7 +28,6 @@ function Brand() {
 
   return (
     <div className="flex flex-col gap-[60px] md:gap-[110px] py-10 md:py-40">
-      {/* Heading: Hidden on screens smaller than md */}
       <motion.div
         className="hidden md:block text-[28px] sm:text-[36px] md:text-[42px] leading-[100%] font-['Roboto_Condensed'] font-bold tracking-[-0.02em] text-center uppercase text-black px-4 sm:px-10 md:px-[228px]"
         initial={{ opacity: 0, y: 40 }}
@@ -41,13 +38,11 @@ function Brand() {
         Lorem ipsum dolor sit amet consectetur. Commodo leo amet.
       </motion.div>
 
-      {/* Brand rows */}
       <div className="px-2 sm:px-8 md:px-[164px] flex flex-col gap-8 md:gap-[47px]">
         {brandRows.map((row, rowIndex) => (
           <motion.div
             key={rowIndex}
             className={
-              // Responsive: column on mobile, row on md+
               "flex flex-col md:flex-row md:justify-between items-center " +
               (rowIndex === 0
                 ? "md:px-[81px] md:gap-[120px]"

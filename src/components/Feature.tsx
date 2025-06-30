@@ -3,7 +3,6 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { motion, easeOut } from "framer-motion";
 
 export default function Feature() {
-  // Animation variants
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: easeOut } },
@@ -77,7 +76,6 @@ export default function Feature() {
         </motion.button>
       </motion.div>
 
-      {/* Absolute image: hidden on screens smaller than md */}
       <motion.div
         className="hidden md:block absolute left-0 top-[-10%]"
         initial="hidden"

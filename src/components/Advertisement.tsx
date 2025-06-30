@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 
 export default function Advertisement() {
-  // Animation variants
   const headingVariants = {
     hidden: { opacity: 0, y: 40 },
     visible: {
@@ -41,7 +40,6 @@ export default function Advertisement() {
         dolor sit amet consectetur. Quis adipiscing purus egestas aliquam
         viverra mi. dolor sit amet consectetur. Quis adipiscing
       </motion.div>
-      {/* LOGO: hidden on screens smaller than md */}
       <motion.button
         className="
           hidden md:block
