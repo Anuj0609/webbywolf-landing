@@ -39,7 +39,6 @@ function Gallery() {
 
   return (
     <div className="bg-[#F1F5F9] w-full relative mb-20 md:mb-60">
-      {/* Section Title and Button */}
       <motion.div
         className="px-4 sm:px-10 md:px-20 pt-8 sm:pt-14 md:pt-20 pb-8  xl:pb-[370px] max-w-full xl:max-w-[470px] 2xl:max-w-[1500px] flex flex-col gap-6 md:gap-8"
         initial="hidden"
@@ -69,7 +68,6 @@ function Gallery() {
         </motion.button>
       </motion.div>
 
-      {/* Absolute-positioned images for xl and above */}
       <div className="hidden xl:block w-full h-full absolute top-0 left-0 pointer-events-none">
         {galleryImages.map((img, i) => (
           <motion.img
@@ -89,7 +87,6 @@ function Gallery() {
         ))}
       </div>
 
-      {/* 2-column grid for mobile, md, and lg screens */}
       <div className="block xl:hidden px-4 pt-4 pb-8">
         <div className="grid grid-cols-2 gap-3">
           {galleryImagesMobile.map((src, i) => (

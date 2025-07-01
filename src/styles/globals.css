@@ -1,16 +1,3 @@
 @import "tailwindcss";
 
-/* globals.css or a new CSS file */
-.bg-multi {
-  background-image: url("/Bg-Graphic1.png"), url("/Bg-Graphic1.png"),
-    url("/Bg-Graphic1.png");
-  background-repeat: no-repeat, no-repeat, no-repeat;
 
-  background-position: top left, /* First image position */ center right,
-    /* Second image position */ bottom center; /* Third image position */
-  background-size: 2072.67px 1037.36px, /* First image size */ 2018.91px 674.56px
-  ,
-    /* Second image size */ 2770.72px
-    941.16px
-    ; /* Third image size */
-}

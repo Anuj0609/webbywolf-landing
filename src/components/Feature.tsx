@@ -80,7 +80,6 @@ export default function Feature() {
         </motion.button>
       </motion.div>
 
-      {/* Image for sm, md, lg (below xl) */}
       <motion.div
         className="block xl:hidden mt-10 flex justify-center"
         initial="hidden"
@@ -97,7 +96,6 @@ export default function Feature() {
         />
       </motion.div>
 
-      {/* Image for xl and above (absolute positioning) */}
       <motion.div
         className="hidden xl:block absolute left-0 top-[-10%]"
         initial="hidden"

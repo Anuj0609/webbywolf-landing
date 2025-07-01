@@ -39,7 +39,6 @@ function Services() {
           borderImageSlice: 1,
         }}
       >
-        {/* Main heading and text, always visible */}
         <motion.div
           className="px-4 sm:px-8 md:px-[80px] pt-8 sm:pt-12 md:pt-16 pb-8 xl:pb-[400px]"
           initial="hidden"
@@ -73,7 +72,6 @@ function Services() {
           </div>
         </motion.div>
 
-        {/* MOBILE/TABLET/LG LAYOUT: visible up to lg, hidden on xl+ */}
         <div className="flex flex-col gap-6 px-4 pb-8 xl:hidden">
           <motion.div
             className="flex justify-center"
@@ -122,7 +120,6 @@ function Services() {
           </motion.div>
         </div>
 
-        {/* XL AND ABOVE: original desktop layout, untouched */}
         <motion.div
           className="hidden xl:block absolute right-0 top-[-10%]"
           initial="hidden"
