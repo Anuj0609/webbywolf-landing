@@ -30,10 +30,10 @@ function Download() {
     <motion.div
       className="
         bg-[#F3F3F3] mb-16 md:mb-40 relative
-        pt-8 sm:pt-16 md:pt-24
+        pt-8 sm:pt-16 md:pt-24  2xl:pt-60
         pl-4 sm:pl-10 md:pl-20
         pb-8 sm:pb-16 md:pb-20
-        pr-4 sm:pr-10 md:pr-[945px]
+        pr-4 sm:pr-10 md:pr-[90px] 
         gap-8 md:gap-[66px]
         flex flex-col w-full overflow-hidden
       "
@@ -43,7 +43,7 @@ function Download() {
       viewport={{ once: true, amount: 0.2 }}
     >
       <motion.div
-        className="flex flex-col gap-3 md:gap-5"
+        className="flex flex-col gap-3 md:gap-5 lg:pr-[50px] xl:pr-[850px]"
         variants={fadeUpVariants}
       >
         <div className="font-['Inter'] font-semibold text-[20px] sm:text-[22px] md:text-[24px] leading-[100%] tracking-[-0.04em] text-[#0546D2]">
@@ -80,7 +80,7 @@ function Download() {
       <motion.img
         src="./Download3.png"
         alt=""
-        className="hidden md:block absolute left-[476px] top-0 w-[1075px] h-[717px]"
+        className="hidden xl:block absolute right-[50px] bottom-0 w-[1075px] h-[550px]"
         variants={imageVariants}
       />
     </motion.div>

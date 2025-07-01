@@ -43,7 +43,7 @@ export default function Hero() {
   };
 
   return (
-    <div className="w-full relative mb-10 md:mb-[82px] min-h-[300px] md:min-h-[831px]">
+    <div className="w-full relative mb-10 xl:mb-[82px] min-h-[300px] xl:min-h-[831px] flex">
       <motion.div
         className="fixed top-0 left-0 w-full z-50 transition-all duration-300"
         variants={navbarVariants}
@@ -53,7 +53,7 @@ export default function Hero() {
         <Navbar />
       </motion.div>
 
-      <div className="pt-16 md:pt-[100px] flex items-center justify-between relative">
+      <div className="pt-16 md:pt-2 xl:pt-[100px] flex items-center justify-between relative">
         <motion.div
           className="relative z-20 w-full md:w-auto"
           variants={contentVariants}
@@ -62,22 +62,21 @@ export default function Hero() {
         >
           <Subhero />
         </motion.div>
-
-        <motion.div
-          className="hidden md:block absolute top-0 right-0 z-10"
-          variants={imageVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          <Image
-            src="/Hero-Image.png"
-            alt="Hero Illustration"
-            width={699}
-            height={831}
-            className="w-[400px] lg:w-[500px] xl:w-[699px] h-auto"
-          />
-        </motion.div>
       </div>
+      <motion.div
+        className="hidden md:block absolute top-0 right-0 z-10"
+        variants={imageVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        <Image
+          src="/Hero-Image.png"
+          alt="Hero Illustration"
+          width={699}
+          height={831}
+          className="w-[280px] md:w-[350px] lg-[400px] xl:w-[699px] 2xl:w-[800px] h-auto xl:h-[831px]"
+        />
+      </motion.div>
     </div>
   );
 }

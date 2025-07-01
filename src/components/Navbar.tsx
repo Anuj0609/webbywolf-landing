@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { HiMenu } from "react-icons/hi";
+import { div } from "framer-motion/client";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -27,10 +28,14 @@ function Navbar() {
   const handleDropdown = (id: number) => {
     setOpenDropdown(openDropdown === id ? null : id);
   };
-  
 
   return (
-    <div className="w-full px-6 sm:px-[80px] py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between">
+    <div
+      className={`w-full px-6 sm:px-[80px] py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between ${
+        menuOpen ? "mb-[240px]" : ""
+      }`}
+    >
+      {" "}
       <div className="flex justify-between items-center w-full sm:w-auto">
         <div className="font-inter font-extrabold text-[24px] sm:text-[32px] text-black px-4 py-2 bg-[#DBDBDB]">
           LOGO
@@ -43,7 +48,6 @@ function Navbar() {
           <HiMenu />
         </button>
       </div>
-
       <div
         className={`${
           menuOpen ? "flex" : "hidden"
@@ -53,7 +57,7 @@ function Navbar() {
           {items.map((item) => (
             <div key={item.id} className="relative group mb-2 sm:mb-0">
               <div
-                className="flex items-center text-base sm:text-lg font-semibold text-[#1959AC] cursor-pointer"
+                className="flex items-center text-base lg:text-lg md:text-[10px] font-semibold text-[#1959AC] cursor-pointer"
                 onClick={() => {
                   if (window.innerWidth < 640) handleDropdown(item.id);
                 }}

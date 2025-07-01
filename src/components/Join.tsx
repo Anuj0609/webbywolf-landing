@@ -116,7 +116,9 @@ export default function Join() {
           </button>
         </div>
         <div className="flex flex-col items-center gap-6 w-full">
-          <div className={`grid grid-cols-1 md:grid-cols-3 gap-6 w-full`}>
+          <div
+            className={`grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-6 w-full`}
+          >
             <AnimatePresence initial={false} custom={direction}>
               {visiblePeople.map((person, index) => (
                 <motion.div

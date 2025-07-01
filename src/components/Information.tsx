@@ -115,7 +115,7 @@ function Information() {
 
       <motion.button
         className="
-          hidden md:block
+          hidden xl:block
           py-[10.5px] px-[32.5px] text-black text-[22px] sm:text-[26px] md:text-[32px]
           leading-[100%] tracking-[-0.02em] font-extrabold font-['Inter'] bg-[#DBDBDB] mb-1
           absolute top-4 left-4 sm:top-8 sm:left-8 md:top-10 md:left-20

@@ -62,6 +62,7 @@ function Contact() {
           xl:pl-20 xl:pr-[622px]
           md:pl-10 md:pr-32
           sm:pl-4 sm:pr-4
+          
         "
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -122,13 +123,16 @@ function Contact() {
 
       <motion.div
         className="
-          hidden md:block
-          absolute right-0 top-12
-          w-[200px] h-[220px]
-          sm:w-[300px] sm:h-[340px]
-          md:w-[400px] md:h-[440px]
-          xl:w-[570px] xl:h-[620px]
-          z-10
+          hidden sm:block xl:block 2xl:block 
+    md:hidden lg:hidden
+    absolute right-0 top-12
+    w-[200px] h-[220px]
+    sm:w-[300px] sm:h-[340px]
+    md:w-[400px] md:h-[440px]
+    xl:w-[570px] xl:h-[620px]
+        2xl:max-w-[500px] 2xl:max-h-[500px]  
+
+    z-10
         "
         variants={imageVariants}
         initial="hidden"
@@ -156,8 +160,8 @@ function Contact() {
         <Image
           src="/Contact2.png"
           alt="Contact Illustration"
-          width={300}
-          height={340}
+          width={577}
+          height={620}
           className="w-full h-auto object-cover rounded"
         />
       </motion.div>

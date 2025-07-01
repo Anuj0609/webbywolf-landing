@@ -62,7 +62,7 @@ export default function Story() {
   const currentCard = cardsData[current];
 
   return (
-    <div className="px-4 sm:px-8 md:px-20 py-6">
+    <div className="px-4 sm:px-8 xl:px-20 py-6 overflow-hidden">
       <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12">
         <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 md:mb-4 uppercase">
           Lorem ipsum dolor sit amet{" "}
@@ -74,7 +74,7 @@ export default function Story() {
         </p>
       </div>
 
-      <div className="relative w-full md:w-1/2 mx-auto transition-all duration-700 ease-in-out">
+      <div className="relative w-full md:w-1/2  transition-all duration-700 ease-in-out">
         <div className="hidden md:block relative">
           <Image
             src={currentCard.image}

@@ -16,14 +16,14 @@ function Gallery() {
   };
 
   const galleryImages = [
-    { src: "./Gallery1.png", className: "absolute top-[109px] left-[735px]" },
-    { src: "./Gallery2.png", className: "absolute top-20 left-[900px]" },
-    { src: "/Gallery3.png", className: "absolute top-[266px] left-[570px]" },
-    { src: "/Gallery4.png", className: "absolute top-[350px] left-[735px]" },
-    { src: "/Gallery5.png", className: "absolute bottom-0 left-[81px]" },
-    { src: "/Gallery6.png", className: "absolute bottom-0 left-[245px]" },
-    { src: "/Gallery7.png", className: "absolute bottom-0 left-[735px]" },
-    { src: "/Gallery8.png", className: "absolute bottom-0 left-[900px]" },
+    { src: "./Gallery1.png", className: "absolute top-[109px] right-[570px]" },
+    { src: "./Gallery2.png", className: "absolute top-20 right-[81px]" },
+    { src: "/Gallery3.png", className: "absolute top-[266px] right-[735px]" },
+    { src: "/Gallery4.png", className: "absolute top-[350px] right-[81px]" },
+    { src: "/Gallery5.png", className: "absolute bottom-0 right-[1224px]" },
+    { src: "/Gallery6.png", className: "absolute bottom-0 right-[736px]" },
+    { src: "/Gallery7.png", className: "absolute bottom-0 right-[570px]" },
+    { src: "/Gallery8.png", className: "absolute bottom-0 right-[81px]" },
   ];
 
   const galleryImagesMobile = [
@@ -39,8 +39,9 @@ function Gallery() {
 
   return (
     <div className="bg-[#F1F5F9] w-full relative mb-20 md:mb-60">
+      {/* Section Title and Button */}
       <motion.div
-        className="px-4 sm:px-10 md:px-20 pt-8 sm:pt-14 md:pt-20 pb-8 md:pb-[370px] max-w-full md:max-w-[470px] flex flex-col gap-6 md:gap-8"
+        className="px-4 sm:px-10 md:px-20 pt-8 sm:pt-14 md:pt-20 pb-8  xl:pb-[370px] max-w-full xl:max-w-[470px] 2xl:max-w-[1500px] flex flex-col gap-6 md:gap-8"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
@@ -68,7 +69,8 @@ function Gallery() {
         </motion.button>
       </motion.div>
 
-      <div className="hidden md:block w-full h-full absolute top-0 left-0 pointer-events-none">
+      {/* Absolute-positioned images for xl and above */}
+      <div className="hidden xl:block w-full h-full absolute top-0 left-0 pointer-events-none">
         {galleryImages.map((img, i) => (
           <motion.img
             key={img.src}
@@ -87,7 +89,8 @@ function Gallery() {
         ))}
       </div>
 
-      <div className="block md:hidden px-4 pt-4 pb-8">
+      {/* 2-column grid for mobile, md, and lg screens */}
+      <div className="block xl:hidden px-4 pt-4 pb-8">
         <div className="grid grid-cols-2 gap-3">
           {galleryImagesMobile.map((src, i) => (
             <motion.img

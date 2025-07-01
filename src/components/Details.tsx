@@ -52,16 +52,22 @@ function Details() {
 
   return (
     <div className="px-4 sm:px-8 md:px-20 py-6 md:py-10 mb-10 md:mb-40">
-      <div className="hidden md:block pl-5 pr-[521px]">
-        <div className="text-[24px] font-semibold leading-[100%] tracking-[-0.04em] text-[#0546D2] font-['Inter'] mb-2">
+      <div
+        className=" hidden            /* Hidden by default (sm and below) */
+    md:block          /* Show block on md and up */
+    pl-3 md:pl-5      /* Padding left: 3 for md, 5 for lg and above */
+    pr-6 md:pr-32 lg:pr-[300px] xl:pr-[521px]  /* Responsive right padding */
+  "
+      >
+        <div className="text-[20px] md:text-[24px] font-semibold leading-[100%] tracking-[-0.04em] text-[#0546D2] font-['Inter'] mb-2">
           Lorem ipsum dolor sit amet
         </div>
 
-        <div className="text-[42px] font-bold leading-[100%] tracking-[-0.02em] uppercase text-[#222222] font-['Roboto_Condensed'] mb-4">
+        <div className="text-[30px] md:text-[36px] lg:text-[42px] font-bold leading-[100%] tracking-[-0.02em] uppercase text-[#222222] font-['Roboto_Condensed'] mb-4">
           LOREM IPSUM dolor sit
         </div>
 
-        <div className="text-[18px] font-normal leading-[25px] tracking-[0em] text-[#000000] font-['Inter'] mb-10">
+        <div className="text-[16px] md:text-[18px] font-normal leading-[22px] md:leading-[25px] tracking-[0em] text-[#000000] font-['Inter'] mb-10">
           Lorem ipsum dolor sit amet consectetur. Amet sodales sociis facilisis
           donec dui. Mi porttitor ut aliquam mattis maecenas eget integer in
           nam. Non nisl iaculis at felis aliquet. Hendrerit tellus at purus
@@ -85,7 +91,7 @@ function Details() {
       </div>
 
       <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-15 px-0 md:px-[150px]"
+        className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-15 px-0 xl:px-[150px]"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"

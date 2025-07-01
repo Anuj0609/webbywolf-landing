@@ -52,7 +52,7 @@ export default function Footer() {
         items-center md:items-start
         gap-8 md:gap-8
         text-white
-        px-0 md:pl-[392px] md:pr-[252px]
+        px-0 xl:pl-[392px] xl:pr-[252px]
       "
       >
         {loremData.map((section, index) => (

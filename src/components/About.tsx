@@ -4,7 +4,6 @@ import { IoCallOutline } from "react-icons/io5";
 import Image from "next/image";
 import { motion, easeOut } from "framer-motion";
 
-
 function About() {
   const aboutSections = [
     {
@@ -43,7 +42,7 @@ function About() {
   };
 
   const imageVariants = {
-    hidden: { opacity: 0, x: 40 },
+    hidden: { opacity: 0, x: 10 },
     visible: {
       opacity: 1,
       x: 0,
@@ -83,19 +82,19 @@ function About() {
           variants={containerVariants}
         >
           <motion.div
-            className="font-semibold text-[20px] sm:text-[22px] md:text-[24px] leading-[100%] tracking-[-0.04em] text-[#0546D2]"
+            className="font-semibold text-[20px] sm:text-[22px] md:text-[24px] 2xl:text-[30px] leading-[100%] tracking-[-0.04em] text-[#0546D2]"
             variants={textVariants}
           >
             Lorem ipsum dolor sit
           </motion.div>
           <motion.div
-            className="font-bold text-[28px] sm:text-[34px] md:text-[42px] leading-[100%] tracking-[-0.02em] uppercase text-[#222222] mb-4 font-['Roboto_Condensed']"
+            className="font-bold text-[28px] sm:text-[34px] md:text-[42px] 2xl:text-[48px] leading-[100%] tracking-[-0.02em] uppercase text-[#222222] mb-4 font-['Roboto_Condensed']"
             variants={textVariants}
           >
             Lorem ipsum dolor sit amet
           </motion.div>
           <motion.div
-            className="text-[16px] sm:text-[17px] md:text-[18px] leading-[25px] font-normal tracking-normal text-gray-700 mb-10 font-['Inter']"
+            className="text-[16px] sm:text-[17px] md:text-[18px] 2xl:text-[20px] leading-[25px] font-normal tracking-normal text-gray-700 mb-10 font-['Inter']"
             variants={textVariants}
           >
             Lorem ipsum dolor sit amet consectetur. Amet sodales sociis
@@ -166,7 +165,7 @@ function About() {
             src="/About4.png"
             alt="Decorative Graphic"
             width={629}
-            height={803}
+            height={603}
             className="w-full h-full object-cover rounded"
             priority
           />
